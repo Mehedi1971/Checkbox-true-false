@@ -31,10 +31,53 @@
 
 <!--<div>-->
 <!--    <table>-->
-<!--        <tr id="abc" th:each="lab : ${listoftest}">-->
-<!--            <td >-->
-<!--                <span th:text="${lab.checkbox}?true:false">a</span>-->
-<!--                </td>-->
+<!--        <tr>-->
+<!--            <th>id</th>-->
+<!--            <th>testname</th>-->
+<!--            <th>checkbox</th>-->
+<!--        </tr>-->
+<!--        <tr th:each="lab : ${listoftest}">-->
+<!--            -->
+<!--                <td th:text="${lab.id}"></td>-->
+<!--                <td th:text="${lab.testname}"></td>-->
+<!--                <td th:text="${lab.checkbox}"></td>-->
+<!--            -->
+
+<!--        </tr>-->
+<!--    </table>-->
+<!--</div>-->
+
+<div>
+
+        <div id="abc" th:each="lab : ${listoftest}">
+            <div >
+                <span th:if="${lab.checkbox}?true:false">
+
+                    <span th:if="${lab.testname}=='a'">a</span> </span>
+                </div>
+
+            <div >
+                <span th:if="${lab.checkbox}?true:false">
+
+                    <span th:if="${lab.testname}=='b'">b</span> </span>
+            </div>
+
+            <div >
+                <span th:if="${lab.checkbox}?true:false">
+
+                    <span th:if="${lab.testname}=='c'">c</span> </span>
+            </div>
+
+            <div >
+                <span th:if="${lab.checkbox}?true:false">
+
+                    <span th:if="${lab.testname}=='d'">d</span> </span>
+            </div>
+            <div >
+                <span th:if="${lab.checkbox}?true:false">
+
+                    <span th:if="${lab.testname}=='e'">e</span> </span>
+            </div>
 <!--            <td >-->
 <!--                <span th:if="${lab.checkbox}==true">b</span>-->
 <!--            </td>-->
@@ -47,13 +90,13 @@
 <!--            <td >-->
 <!--                <span th:if="${lab.checkbox}==true">e</span>-->
 <!--            </td>-->
-<!--&lt;!&ndash;            <td>b</td>&ndash;&gt;-->
-<!--&lt;!&ndash;            <td>c</td>&ndash;&gt;-->
-<!--&lt;!&ndash;            <td th:text="${lab.checkbox}?'true':'false'">d</td>&ndash;&gt;-->
-<!--&lt;!&ndash;            <td>e</td>&ndash;&gt;-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--</div>-->
+<!--            <td>b</td>-->
+<!--            <td>c</td>-->
+<!--            <td th:text="${lab.checkbox}?'true':'false'">d</td>-->
+<!--            <td>e</td>-->
+        </div>
+</div>
+</div>
 <!--<script>-->
 <!--    let a=document.getElementById('abc').innerText;-->
 <!--    console.log(a);-->
