@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form th:action="@{save}" th:object="${lab}" method="post">-->
+<!--    <input type="text" th:field="*{testname}"> <br>-->
+<!--    <input type="text" th:field="*{checkbox}">-->
+
+<!--</form>-->
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>testname</th>
+        <th>checkbox</th>
+    </tr>
+    <tr th:each="lab : ${listoftest}">
+        <div th:if="${lab.checkbox}?true:false">
+            <td th:text="${lab.id}"></td>
+            <td th:text="${lab.testname}"></td>
+            <td th:text="${lab.checkbox}"></td>
+        </div>
+
+    </tr>
+</table>
+
+<!--<div>-->
+<!--    <table>-->
+<!--        <tr id="abc" th:each="lab : ${listoftest}">-->
+<!--            <td >-->
+<!--                <span th:text="${lab.checkbox}?true:false">a</span>-->
+<!--                </td>-->
+<!--            <td >-->
+<!--                <span th:if="${lab.checkbox}==true">b</span>-->
+<!--            </td>-->
+<!--            <td >-->
+<!--                <span th:if="${lab.checkbox}==true">c</span>-->
+<!--            </td>-->
+<!--            <td >-->
+<!--                <span th:if="${lab.checkbox}==true">d</span>-->
+<!--            </td>-->
+<!--            <td >-->
+<!--                <span th:if="${lab.checkbox}==true">e</span>-->
+<!--            </td>-->
+<!--&lt;!&ndash;            <td>b</td>&ndash;&gt;-->
+<!--&lt;!&ndash;            <td>c</td>&ndash;&gt;-->
+<!--&lt;!&ndash;            <td th:text="${lab.checkbox}?'true':'false'">d</td>&ndash;&gt;-->
+<!--&lt;!&ndash;            <td>e</td>&ndash;&gt;-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</div>-->
+<!--<script>-->
+<!--    let a=document.getElementById('abc').innerText;-->
+<!--    console.log(a);-->
+<!--</script>-->
+</body>
+</html>
